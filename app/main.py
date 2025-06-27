@@ -3,6 +3,7 @@ from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from app.gemini import Gemini
 from app.throttling import apply_rate_limit
+from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
@@ -20,9 +21,12 @@ app.add_middleware(
 
 def load_system_prompt():
     try:
-        with open("system_prompt.md", "r") as f:
+        base_dir = Path(__file__).resolve().parent
+        prompt_path = base_dir / "system_prompt.md"
+        with open(prompt_path, "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
+        print("system_prompt.md not found at:", prompt_path)
         return None
 
 
