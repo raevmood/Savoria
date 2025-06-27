@@ -59,7 +59,7 @@ While a specific dietary menu is not published on the website, we have several d
 For specific dietary requirements, allergies, or to inquire about gluten-free options, we strongly recommend that guests call the restaurant directly when making a reservation. This allows our chefs to prepare accordingly and ensure a safe and enjoyable dining experience.
 # How can I contact the restaurant?
 You can reach us through the following channels:
-Phone: 1 (858) 123-4567
+Phone: 0754455489
 Email: info@savoria.com
 In Person: 23 Culinary Street, Food District
 Website Feedback: You can also use the feedback form on our website to share your thoughts or experiences.

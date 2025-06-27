@@ -28,3 +28,4 @@ def apply_rate_limit(key: str):
 
     user_requests[user_id].append(current_time)
     return True
+
