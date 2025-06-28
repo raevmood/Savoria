@@ -3,7 +3,7 @@ from collections import defaultdict
 from fastapi import HTTPException, status
 
 
-GLOBAL_RATE_LIMIT = 6
+GLOBAL_RATE_LIMIT = 12
 GLOBAL_TIME_WINDOW_SECONDS = 60
 
 user_requests = defaultdict(list)
