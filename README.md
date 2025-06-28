@@ -11,3 +11,5 @@ def load_system_prompt():
     except FileNotFoundError:
         print(f"system_prompt.md not found at: {prompt_path}")
         return None
+
+COPY /app/system_prompt.md /app/system_prompt.md
