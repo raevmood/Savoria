@@ -5,9 +5,7 @@ from app.gemini import Gemini
 from app.throttling import apply_rate_limit
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
 
-load_dotenv()
 
 app = FastAPI()
 
@@ -18,16 +16,15 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
     )
-
+    
 def load_system_prompt():
     try:
-        project_root = Path(__file__).resolve().parent
-        prompt_path = project_root / "system_prompt.md"
-        with open(prompt_path, "r", encoding="utf-8") as f:
+        with open("system_prompt.md", "r") as f:
             return f.read()
     except FileNotFoundError:
-        print(f"system_prompt.md not found at: {prompt_path}")
         return None
+    if system_prompt is None:
+        raise RuntimeError("Missing system_prompt.md file!")
 
 
 system_prompt = load_system_prompt()
