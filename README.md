@@ -13,3 +13,5 @@ def load_system_prompt():
         return None
 
 COPY /app/system_prompt.md /app/system_prompt.md
+
+COPY ./app /code/app
